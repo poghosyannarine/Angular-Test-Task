@@ -9,3 +9,7 @@
   color: rgb(234 228 228);
   text-align: center;
 }
+
+.mat-toolbar-row, .mat-toolbar-single-row{
+  justify-content: flex-end;
+}
