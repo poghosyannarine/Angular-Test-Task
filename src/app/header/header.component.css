@@ -1,0 +1,11 @@
+.mat-toolbar {
+  background: #737792;
+}
+
+.mat-toolbar a {
+  margin: 7px;
+  font-size: 19px;
+  text-decoration: none;
+  color: rgb(234 228 228);
+  text-align: center;
+}
