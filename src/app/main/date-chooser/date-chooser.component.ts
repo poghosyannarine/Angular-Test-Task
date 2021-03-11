@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {MatDatepickerInputEvent} from '@angular/material/datepicker';
 import {ArticlesService} from '../../shared/articles.service';
@@ -9,8 +9,7 @@ import {ArticlesService} from '../../shared/articles.service';
   styleUrls: ['./date-chooser.component.css']
 })
 export class DateChooserComponent implements OnInit {
-  @ViewChild('myPicker') myPicker;
-  date: FormControl = new FormControl('10/12/2020');
+  date: FormControl = new FormControl('');
   constructor(
     private articlesService: ArticlesService
   ) { }
@@ -21,7 +20,6 @@ export class DateChooserComponent implements OnInit {
 
   public dateChange($event: MatDatepickerInputEvent<any, any | null>) {
     this.articlesService.date$.next($event.value);
-    console.log(typeof $event.value, $event.value);
   }
 
 

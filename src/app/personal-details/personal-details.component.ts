@@ -26,8 +26,8 @@ export class PersonalDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.personalData.valueChanges.subscribe(res => {
       if (this.personalData.valid) {
+        localStorage.setItem('user', JSON.stringify(this.personalData.value));
         this.router.navigate(['chosen-articles']);
-        console.log(res);
       }
     });
   }
